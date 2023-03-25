@@ -45,8 +45,8 @@
         const view = new MapView({
           container: "viewDiv",
           map: map,
-          center: [-71.6899, 43.7598],
-          zoom: 12
+          center: [107.778019804, 15.86153673],
+          zoom: 10
         });
 
         /*******************************************************************
@@ -58,12 +58,12 @@
         view.popup.autoOpenEnabled = false;
         view.on("click", (event) => {
           // Get the coordinates of the click on the view
-          const lat = Math.round(event.mapPoint.latitude * 1000) / 1000;
-          const lon = Math.round(event.mapPoint.longitude * 1000) / 1000;
+          const lat = Math.round(event.mapPoint.latitude * 1000000000) / 1000000000;
+          const lon = Math.round(event.mapPoint.longitude * 1000000000) / 1000000000;
 
           view.popup.open({
             // Set the popup's title to the coordinates of the location
-            title: "Reverse geocode: [" + lon + ", " + lat + "]",
+            title: "Reverse geocode: [" + lon + ", " + lat + "],",
             location: event.mapPoint // Set the location of the popup to the clicked location
           });
 
