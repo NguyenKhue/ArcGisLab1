@@ -6,11 +6,11 @@ export function createLines(paths,  name, location, color = [226, 119, 40]) {
         paths: paths,
         symbol: {
             type: "simple-line",
-            color: [226, 119, 40], // orange
+            color: color,
             width: 2
         },
-        Name: "Làng đại học",
-        Location: "Quận Thủ Đức",
+        Name: name,
+        Location: location,
         popupTemplate: point_template_area
     }
 }

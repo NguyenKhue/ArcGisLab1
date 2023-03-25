@@ -15,18 +15,18 @@
         }
     </style>
 
-    <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css">
-    <script src="https://js.arcgis.com/4.15/"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.26/"></script>
 
     <script type="module">
         import { point_template_tree, point_template_light, point_template_chair, point_template_area, point_template_university } from './template/pointTemplate.js';
         import { tempPoints } from './template/tempPoints.js'
         import { tempLines } from './template/tempLines.js'
-        import { createLines } from './template/createLines.js'
         import { createData } from './template/createData.js'
+        import { TTHLines } from './provinces/thuathienhue/TTHLines.js'
 
-        var points =  [].concat(tempPoints, []) // add new points here
-        var lines =  [].concat(tempLines, []) // add new lines here
+        var points = [].concat(tempPoints, []) // add new points here
+        var lines = [].concat(tempLines, [TTHLines]) // add new lines here
 
         var jsondata = createData(points, lines)
 
@@ -38,7 +38,7 @@
         ], function (Map, MapView, Graphic, GraphicsLayer) {
 
             var map = new Map({
-                basemap: "topo-vector"
+                basemap: "streets-navigation-vector"
             });
             map.on("load", function () {
                 map.graphics.enableMouseEvents();
