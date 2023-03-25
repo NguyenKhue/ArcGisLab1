@@ -1,4 +1,4 @@
-import { createLine } from '../createLines.js';
+import { createLines } from '../../template/createLines.js'
 
 var paths = [
 
@@ -16,4 +16,4 @@ var paths = [
     [107.57107439788132, 10.567474912806793],
 ]
 
-export var BinhThuanLine = createLine(paths,"Bình Thuận","tỉnh Bình Thuận")
+export var BinhThuanLine = createLines(paths,"Bình Thuận","tỉnh Bình Thuận")
