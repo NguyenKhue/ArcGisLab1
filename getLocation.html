@@ -96,6 +96,7 @@
              * address is printed to the popup content.
              *******************************************************************/
             view.popup.autoOpenEnabled = false;
+            var t = ""
             view.on("click", (event) => {
                 // Get the coordinates of the click on the view
                 const lat = Math.round(event.mapPoint.latitude * 1000000000) / 1000000000;
@@ -107,7 +108,17 @@
                     location: event.mapPoint // Set the location of the popup to the clicked location
                 });
 
-                saveTextToClipboard("[" + lon + ", " + lat + "],")
+                t = "[" + lon + ", " + lat + "],";
+                navigator.clipboard.readText()
+                    .then(text => {
+                        t = text + t;
+                        console.log('Pasted content: ', t);
+                        saveTextToClipboard(t)
+                    })
+                    .catch(err => {
+                        console.error('Failed to read clipboard contents: ', err);
+                    });
+
 
                 const params = {
                     location: event.mapPoint
