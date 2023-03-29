@@ -25,13 +25,14 @@
         import { createData } from './template/createData.js'
         import { TTHLines } from './provinces/thuathienhue/TTHLines.js'
         import { THLines } from './provinces/ThanhHoa/THLines.js'
+        import { HUEHCMHIGHWay } from './provinces/thuathienhue/HCMHighWay.js'
         import { QTLines } from './provinces/quangtri/QTLines.js'
         import { QBLines } from './provinces/quangbinh/QBLines.js'
 
         import { BinhThuanLine } from './provinces/BinhThuan/Lines.js'
 
-        var points = [].concat([]) // add new points here
-        var lines = [].concat([TTHLines, QTLines, QBLines, BinhThuanLine, THLines]) // add new lines here
+        var points =  [].concat([]) // add new points here
+        var lines =  [].concat([TTHLines, HUEHCMHIGHWay , QTLines, QBLines, BinhThuanLine, THLines]) // add new lines here
 
         var jsondata = createData(points, lines)
 
@@ -52,7 +53,7 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [106.991520454, 17.164849958],
+                center: [107.096898011, 16.400541035],
                 zoom: 15,
                 highlightOptions: {
                     color: "blue"
