@@ -103,18 +103,18 @@
                 const lat = Math.round(event.mapPoint.latitude * 1000000000) / 1000000000;
                 const lon = Math.round(event.mapPoint.longitude * 1000000000) / 1000000000;
 
-                // view.popup.open({
-                //     // Set the popup's title to the coordinates of the location
-                //     title: "Reverse geocode: [" + lon + ", " + lat + "],",
-                //     location: event.mapPoint // Set the location of the popup to the clicked location
-                // });
-                t =  "[" + lon + ", " + lat + "],\n";
-                
+                view.popup.open({
+                    // Set the popup's title to the coordinates of the location
+                    title: "Reverse geocode: [" + lon + ", " + lat + "],",
+                    location: event.mapPoint // Set the location of the popup to the clicked location
+                });
+
+                t = "[" + lon + ", " + lat + "],";
                 navigator.clipboard.readText()
                     .then(text => {
                         t = text + t;
-                        saveTextToClipboard(t);
                         console.log('Pasted content: ', t);
+                        saveTextToClipboard(t)
                     })
                     .catch(err => {
                         console.error('Failed to read clipboard contents: ', err);
