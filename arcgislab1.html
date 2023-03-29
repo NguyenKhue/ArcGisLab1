@@ -1,83 +1,103 @@
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <title>ArcGIS JavaScript Tutorials: Create a Starter App</title>
     <style>
-        html,
-        body,
-        #viewDiv {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-        }
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
     </style>
 
-    <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css">
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.15/esri/themes/light/main.css"
+    />
     <script src="https://js.arcgis.com/4.15/"></script>
 
     <script type="module">
-        import { point_template_tree, point_template_light, point_template_chair, point_template_area, point_template_university } from './template/pointTemplate.js';
-        import { tempPoints } from './template/tempPoints.js'
-        import { tempLines } from './template/tempLines.js'
-        import { createLines } from './template/createLines.js'
-        import { createData } from './template/createData.js'
+      import {
+        point_template_tree,
+        point_template_light,
+        point_template_chair,
+        point_template_area,
+        point_template_university,
+      } from "./template/pointTemplate.js";
+      import { tempPoints } from "./template/tempPoints.js";
+      import { tempLines } from "./template/tempLines.js";
+      import { createLines } from "./template/createLines.js";
+      import { createData } from "./template/createData.js";
+      import { quangNamData } from "./provinces/QuangNam.js";
+      import { quangNgaiData } from "./provinces/QuangNgai.js";
+      import { daNangData } from "./provinces/DaNang.js";
+      import { binhDinhData } from "./provinces/BinhDinh.js";
+      import { NR1Data } from "./nationalRoutes/NR1.js";
 
-        var points =  [].concat(tempPoints, []) // add new points here
-        var lines =  [].concat(tempLines, []) // add new lines here
+      var points = [].concat(tempPoints, []); // add new points here
+      var lines = [].concat(
+        quangNamData.lines,
+        quangNgaiData.lines,
+        daNangData.lines,
+        binhDinhData.lines,
+        NR1Data.lines
+      ); // add new lines here
 
-        var jsondata = createData(points, lines)
+      var jsondata = createData(points, lines);
 
-        require([
-            "esri/Map",
-            "esri/views/MapView",
-            "esri/Graphic",
-            "esri/layers/GraphicsLayer"
-        ], function (Map, MapView, Graphic, GraphicsLayer) {
-
-            var map = new Map({
-                basemap: "topo-vector"
-            });
-            map.on("load", function () {
-                map.graphics.enableMouseEvents();
-            });
-
-            var view = new MapView({
-                container: "viewDiv",
-                map: map,
-                center: [107.778019804, 15.86153673],
-                zoom: 12,
-                highlightOptions: {
-                    color: "blue"
-                }
-            });
-            var createGraphic = function (data) {
-                return new Graphic({
-                    geometry: data,
-                    symbol: data.symbol,
-                    attributes: data,
-                    popupTemplate: data.popupTemplate
-                });
-            };
-            var graphicsLayer = new GraphicsLayer();
-            jsondata.points.forEach(function (data) {
-                graphicsLayer.add(createGraphic(data));
-            });
-            jsondata.lines.forEach(function (data) {
-                graphicsLayer.add(createGraphic(data));
-            });
-            jsondata.polygons.forEach(function (data) {
-                graphicsLayer.add(createGraphic(data));
-            });
-            map.add(graphicsLayer);
+      require([
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/Graphic",
+        "esri/layers/GraphicsLayer",
+      ], function (Map, MapView, Graphic, GraphicsLayer) {
+        var map = new Map({
+          basemap: "topo-vector",
         });
+        map.on("load", function () {
+          map.graphics.enableMouseEvents();
+        });
+
+        var view = new MapView({
+          container: "viewDiv",
+          map: map,
+          center: [107.778019804, 15.86153673],
+          zoom: 12,
+          highlightOptions: {
+            color: "blue",
+          },
+        });
+        var createGraphic = function (data) {
+          return new Graphic({
+            geometry: data,
+            symbol: data.symbol,
+            attributes: data,
+            popupTemplate: data.popupTemplate,
+          });
+        };
+        var graphicsLayer = new GraphicsLayer();
+        jsondata.points.forEach(function (data) {
+          graphicsLayer.add(createGraphic(data));
+        });
+        jsondata.lines.forEach(function (data) {
+          graphicsLayer.add(createGraphic(data));
+        });
+        jsondata.polygons.forEach(function (data) {
+          graphicsLayer.add(createGraphic(data));
+        });
+        map.add(graphicsLayer);
+      });
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="viewDiv"></div>
-</body>
-
+  </body>
 </html>
