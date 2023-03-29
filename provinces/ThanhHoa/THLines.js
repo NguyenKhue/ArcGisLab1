@@ -1,7 +1,7 @@
 import { createLines } from "../../template/createLines.js"
 
 var path = [
-
+  // Bắt đầu biên giới Thanh Hóa - Nghệ An
   [105.80543009099388, 19.286690575289963],
   [105.80107001020089, 19.30200998632583],
   [105.79031032292565, 19.297359691945164],
@@ -1992,7 +1992,7 @@ var path = [
   [104.92102938044656, 19.995130409685334],
   [104.9207695788482, 19.995509317366718],
   [104.92012004692714, 19.996019778589137],
-
+  // Kết thúc biên giới Thanh Hóa - Nghệ An
 ]
 
 export var THLines = createLines(path, "Thanh Hóa", "Thanh Hóa")
