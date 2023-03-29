@@ -31,10 +31,8 @@
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
     <script src="https://js.arcgis.com/4.26/"></script>
-
-    <script src="getAllLocationOfProvince.js"></script>
+    <script src="FileSaver.js"></script>
     <script>
-        
         function saveTextToClipboard(text) {
             const textarea = document.createElement('textarea');
             textarea.value = text;
@@ -56,6 +54,9 @@
             toast.style.borderRadius = '5px';
             toast.style.opacity = '0';
             toast.style.transition = 'opacity 0.3s ease-in-out';
+
+            // var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+            // saveAs(blob, "dynamic.txt");
 
             // add the toast element to the document
             document.body.appendChild(toast);
@@ -85,7 +86,7 @@
             const view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [107.778019804, 15.86153673],
+                center:     [105.946250352, 18.073029833],
                 zoom: 10
             });
 
@@ -118,7 +119,6 @@
                     .catch(err => {
                         console.error('Failed to read clipboard contents: ', err);
                     });
-
 
                 const params = {
                     location: event.mapPoint
