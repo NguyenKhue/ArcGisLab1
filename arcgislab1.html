@@ -23,12 +23,15 @@
         import { tempPoints } from './template/tempPoints.js'
         import { tempLines } from './template/tempLines.js'
         import { createData } from './template/createData.js'
-        import { TTHLines } from './provinces/thuathienhue/TTHLines.js'
 
+        import { TTHLines } from './provinces/thuathienhue/TTHLines.js'
         import {BinhThuanLine} from './provinces/BinhThuan/Lines.js'
+        import {DLLines} from './provinces/DakLak/DLLines.js'
+        import {DNLines} from '/provinces/DakNong/DNLines.js'
+        import {LDLines} from '/provinces/LamDong/LDLines.js'
 
         var points =  [].concat(tempPoints, []) // add new points here
-        var lines =  [].concat(tempLines, [TTHLines,BinhThuanLine]) // add new lines here
+        var lines =  [].concat(tempLines, [TTHLines,BinhThuanLine, DLLines, DNLines, LDLines]) // add new lines here
 
         var jsondata = createData(points, lines)
 
@@ -49,8 +52,8 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [107.778019804, 15.86153673],
-                zoom: 12,
+                center:   [108.99353343516246, 12.706270248972848],
+                zoom: 20,
                 highlightOptions: {
                     color: "blue"
                 }
