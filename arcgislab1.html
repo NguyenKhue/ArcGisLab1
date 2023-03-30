@@ -38,8 +38,12 @@
         import { NALines } from './provinces/NgheAn/NALines.js'
         import { HTLines } from './provinces/HaTinh/HTLines.js'
 
+        import {DLLines} from './provinces/DakLak/DLLines.js'
+        import {DNLines} from '/provinces/DakNong/DNLines.js'
+        import {LDLines} from '/provinces/LamDong/LDLines.js'
+
         var points =  [].concat([]) // add new points here
-        var lines = [].concat([TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, QBLines, BinhThuanLine, NinhThuanLine, THLines, NALines, HTLines]) // add new lines here
+        var lines = [].concat([TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, QBLines, BinhThuanLine, NinhThuanLine, THLines, NALines, HTLines, DLLines, DNLines, LDLines]) // add new lines here
 
         var jsondata = createData(points, lines)
 

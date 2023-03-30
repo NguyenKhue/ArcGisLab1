@@ -1,4 +1,4 @@
-import { createLines } from "../../template/createLines.js"
+import { createLines } from "../../template/createLines.js";
 
 var  bgQN = [
     [107.81754812046093, 16.0571691694942],
