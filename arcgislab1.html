@@ -30,6 +30,8 @@
         import { FourtyNineHIGHWay } from './provinces/thuathienhue/49HighWay.js'
         import { OneAHIGHWay } from './provinces/thuathienhue/1AHighWay.js'
         import { QTLines } from './provinces/quangtri/QTLines.js'
+        import { QTHCMHighWay } from './provinces/quangtri/HCMHighWay.js'
+        import { SixteenHighWay } from './provinces/quangtri/AH16.js'
         import { QBLines } from './provinces/quangbinh/QBLines.js'
 
         import { BinhThuanLine } from './provinces/BinhThuan/Lines.js'
@@ -43,7 +45,7 @@
         import {LDLines} from '/provinces/LamDong/LDLines.js'
 
         var points =  [].concat([]) // add new points here
-        var lines = [].concat([TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, QBLines, BinhThuanLine, NinhThuanLine, THLines, NALines, HTLines, DLLines, DNLines, LDLines]) // add new lines here
+        var lines = [].concat([TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, QTHCMHighWay, SixteenHighWay, QBLines, BinhThuanLine, NinhThuanLine, THLines, NALines, HTLines, DLLines, DNLines, LDLines]) // add new lines here
 
         var jsondata = createData(points, lines)
 
@@ -64,7 +66,7 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [107.325740895, 16.604270949],
+                center: [106.972296056, 16.526518137],
                 zoom: 15,
                 highlightOptions: {
                     color: "blue"
