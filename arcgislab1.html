@@ -34,10 +34,12 @@
 
         import { BinhThuanLine } from './provinces/BinhThuan/Lines.js'
         import { NinhThuanLine } from './provinces/NinhThuan/Lines.js'
+        import { KhanhHoaLine } from './provinces/KhanhHoa/Lines.js'
+
 
 
         var points = [].concat([]) // add new points here
-        var lines = [].concat([TTHLines, HUEHCMHIGHWay, FourtyNineHIGHWay, QTLines, QBLines, BinhThuanLine, NinhThuanLine, THLines, NALines, HTLines]) // add new lines here
+        var lines = [].concat([TTHLines, HUEHCMHIGHWay, FourtyNineHIGHWay, QTLines, QBLines, BinhThuanLine, NinhThuanLine, KhanhHoaLine, THLines, NALines, HTLines]) // add new lines here
 
         var jsondata = createData(points, lines)
 
@@ -58,7 +60,7 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [106.4958238, 17.9646834],
+                center: [109.19522996253446, 11.81123051162608],
 
                 zoom: 15,
                 highlightOptions: {
