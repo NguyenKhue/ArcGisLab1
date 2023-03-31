@@ -35,6 +35,7 @@
         import { AHOneQTHIGHWay } from './provinces/quangtri/AH1QT.js'
         import { SixteenHighWay } from './provinces/quangtri/AH16.js'
         import { QBLines } from './provinces/quangbinh/QBLines.js'
+        import { AH1QB } from './provinces/quangbinh/AH1QB.js'
 
         import { BinhThuanLine } from './provinces/BinhThuan/Lines.js'
         import { OneABTLine } from './provinces/BinhThuan/1A.js'
@@ -69,7 +70,7 @@
             ]) // add new points here
         var lines = [].concat(
             [
-                TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines,
+                TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, AH1QB,
                 BinhThuanLine, NinhThuanLine, KhanhHoaLine,
                 OneABTLine, QL27NTLine, QL28BTLine, QL55BTLine, QL1ANTLine, QL1AKHLine, QL26KHLine,
                 THLines, NALines, HTLines, DLLines, DNLines, LDLines]) // add new lines here
@@ -93,7 +94,7 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [107.325740895, 16.604270949],
+                center: [106.558484079, 17.503991374],
                 zoom: 15,
                 highlightOptions: {
                     color: "blue"
