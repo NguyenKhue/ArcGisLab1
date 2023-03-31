@@ -37,19 +37,33 @@
         import { QBLines } from './provinces/quangbinh/QBLines.js'
 
         import { BinhThuanLine } from './provinces/BinhThuan/Lines.js'
+        import { OneABTLine } from './provinces/BinhThuan/1A.js'
+        import { QL28BTLine } from './provinces/BinhThuan/QL28.js'
+        import { QL55BTLine } from './provinces/BinhThuan/QL55.js'
+        import { QL27NTLine } from './provinces/NinhThuan/QL27.js'
+        import { QL1ANTLine } from './provinces/NinhThuan/QL1A.js'
+
         import { NinhThuanLine } from './provinces/NinhThuan/Lines.js'
         import { KhanhHoaLine } from './provinces/KhanhHoa/Lines.js'
+        import { QL1AKHLine } from './provinces/KhanhHoa/QL1A.js'
+        import { QL26KHLine } from './provinces/KhanhHoa/QL26.js'
+        import { TSN, KGH, HQH, UKH, TTH, TBD, TCU, UPT, UNL } from './provinces/KhanhHoa/University.js'
 
 
         import { NALines } from './provinces/NgheAn/NALines.js'
         import { HTLines } from './provinces/HaTinh/HTLines.js'
 
-        import {DLLines} from './provinces/DakLak/DLLines.js'
-        import {DNLines} from '/provinces/DakNong/DNLines.js'
-        import {LDLines} from '/provinces/LamDong/LDLines.js'
+        import { DLLines } from './provinces/DakLak/DLLines.js'
+        import { DNLines } from '/provinces/DakNong/DNLines.js'
+        import { LDLines } from '/provinces/LamDong/LDLines.js'
 
-        var points =  [].concat([]) // add new points here
-        var lines = [].concat([TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, BinhThuanLine, NinhThuanLine, KhanhHoaLine, THLines, NALines, HTLines, DLLines, DNLines, LDLines]) // add new lines here
+        var points = [].concat([TSN, KGH, HQH, UKH, TTH, TBD, TCU, UPT, UNL]) // add new points here
+        var lines = [].concat(
+            [
+                TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines,
+                BinhThuanLine, NinhThuanLine, KhanhHoaLine,
+                OneABTLine, QL27NTLine, QL28BTLine, QL55BTLine, QL1ANTLine, QL1AKHLine, QL26KHLine,
+                THLines, NALines, HTLines, DLLines, DNLines, LDLines]) // add new lines here
 
         var jsondata = createData(points, lines)
 
@@ -70,7 +84,7 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center:     [107.325740895, 16.604270949],
+                center: [107.325740895, 16.604270949],
                 zoom: 15,
                 highlightOptions: {
                     color: "blue"
