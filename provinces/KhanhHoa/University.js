@@ -62,3 +62,109 @@ export var UNL = createPoint(
     "Phân hiệu Đại học Nông Lâm TP. HCM tại Ninh Thuận",
     "tỉnh Ninh Thuận",
 )
+
+
+// Huế
+
+export var DHA = createPoint(
+    107.60988784810479,
+    16.43718755988419, 
+    "Đại học Luật - Đại Học Huế",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+export var DHC = createPoint(
+     107.60214348921832,
+     16.444128681041,    
+    "Khoa Giáo Dục Thể Chất – Đại Học Huế",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+export var DHD = createPoint(
+    107.60013281371529,
+    16.478494774380838,   
+    "Trường Du Lịch Đại học Huế",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+export var DHF = createPoint(
+    107.59947300531631,
+    16.443234059376028,     
+    "Trường Đại Học Ngoại Ngữ Huế",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+export var DHK = createPoint(
+    107.60401154772993,
+    16.443548987336072,     
+    "Trường Đại học Kinh tế, Đại học Huế",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+export var DHL = createPoint(
+    107.57287131242676,
+    16.477479596168806,     
+    "Trường Đại học Nông Lâm Huế",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+export var DHN = createPoint(
+    107.57418802559656,
+    16.478236923322925,    
+    "Trường Đại học Nghệ thuật Huế",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+export var DHS = createPoint(
+    107.59126190573326,
+    16.467812745285467,   
+    "Trường Đại học Sư phạm Huế",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+export var DHT = createPoint(
+    107.59198610541203,
+    16.45980390595444,     
+    "Trường Đại học Khoa học Huế",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+export var DHY = createPoint(
+    107.59024853092285,
+    16.463033190142188,    
+    "Đại Học Y Dược – Đại Học Huế",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+export var DPX = createPoint(
+    107.59234633701108,
+    16.464563383886077,     
+    "Đại Học Dân Lập Phú Xuân",
+    "tỉnh Thừa Thiên - Huế",
+)
+
+
+// Quảng Trị
+
+export var DKT = createPoint(
+    107.09821446799974,
+    16.78985058347215,      
+    "Phân Hiệu Đại Học Huế tại Quảng Trị",
+    "tỉnh Quảng Trị",
+)
+
+// Quảng Bình
+
+export var DHCN = createPoint(
+    106.62373918894752,
+    21.060312436197695,       
+    "Trường Đại học Công nghiệp Quảng Ninh",
+    "tỉnh Quảng Bình",
+)
+
+export var DQB = createPoint(
+    106.60804788265331,
+    17.481619649017304,       
+    "Trường Đại học Quảng Bình",
+    "tỉnh Quảng Bình",
+)
