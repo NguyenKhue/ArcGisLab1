@@ -1,6 +1,6 @@
-import { createLines } from "../../template/createLines.js";
+import { createPolygon } from "../../template/createPolygon.js"
 
-export var QuangNamLine = createLines(
+export var QuangNamLine = createPolygon(
   [
     [
       //---------------- QUẢNG NAM VS ĐÀ NẴNG----------------

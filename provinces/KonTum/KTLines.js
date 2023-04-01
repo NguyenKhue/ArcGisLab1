@@ -1,4 +1,4 @@
-import { createLines } from '../../template/createLines.js'
+import { createPolygon } from "../../template/createPolygon.js"
 
 var paths = [
     [107.55660982941293,14.686069738124027], //Biên giới giao lào với kontum
@@ -7448,4 +7448,4 @@ var paths = [
 
 ]
 
-export var KTLines = createLines(paths,"Kon Tum","tỉnh Kon Tum")
+export var KTLines = createPolygon(paths,"Kon Tum","tỉnh Kon Tum")

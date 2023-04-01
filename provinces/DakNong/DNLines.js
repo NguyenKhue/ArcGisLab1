@@ -1,5 +1,4 @@
-import { createLines } from "../../template/createLines.js";
-import { createPoint } from "../../template/createPoint.js";
+import { createPolygon } from "../../template/createPolygon.js"
 
 var path = [
   // Biên giới Đăk Lăk - Đăk Nông
@@ -2494,4 +2493,4 @@ var path = [
   [107.983378258841, 12.102301491382212],
 ];
 
-export var DNLines = createLines(path, "Đăk Nông", "Đăk Nông");
+export var DNLines = createPolygon(path, "Đăk Nông", "Đăk Nông");

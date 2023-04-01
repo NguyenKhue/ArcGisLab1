@@ -1,7 +1,7 @@
-import { createLines } from "../../template/createLines.js";
-import { createPoint } from "../../template/createPoint.js";
+import { createPolygon } from "../../template/createPolygon.js"
 
 var path = [
+  
   // Biên giới Lâm Đồng - Bình Thuận
   [107.54477024642112, 11.366289376202001],
   [107.54562117651979, 11.366600277912742],
@@ -2076,4 +2076,4 @@ var path = [
   [108.58271849563762, 11.555470091637169],
 ];
 
-export var LDLines = createLines(path, "Lâm Đồng", "Lâm Đồng");
+export var LDLines = createPolygon(path, "Lâm Đồng", "Lâm Đồng");

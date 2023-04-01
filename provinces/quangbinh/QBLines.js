@@ -1,4 +1,4 @@
-import { createLines } from "../../template/createLines.js"
+import { createPolygon } from "../../template/createPolygon.js"
 
 var bd = [
     [106.550400345, 16.997980118],// start biên giới QB
@@ -4424,7 +4424,7 @@ var path = [
 ]
 
 var finalPath = bd.reverse().concat(path)
-export var QBLines = createLines(finalPath, "Quảng Bình", "Quảng Bình")
+export var QBLines = createPolygon(finalPath, "Quảng Bình", "Quảng Bình")
 
 
 
