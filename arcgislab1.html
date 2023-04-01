@@ -27,9 +27,11 @@
         import { QTLines } from './provinces/quangtri/QTLines.js'
 
         import {BinhThuanLine} from './provinces/BinhThuan/Lines.js'
-
+        import { KTLines } from './provinces/KonTum/KTLines.js'
+        import { GLLines } from './provinces/GiaLai/GLLines.js'
+        import { PYLines } from './provinces/PhuYen/PYLines.js'
         var points =  [].concat(tempPoints, []) // add new points here
-        var lines =  [].concat(tempLines, [TTHLines, QTLines, BinhThuanLine]) // add new lines here
+        var lines =  [].concat(tempLines, [TTHLines, QTLines, BinhThuanLine, KTLines, GLLines,PYLines]) // add new lines here
 
         var jsondata = createData(points, lines)
 
