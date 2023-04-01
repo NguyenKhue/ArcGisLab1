@@ -1,4 +1,4 @@
-import { point_template_area } from './pointTemplate.js';
+import { point_template_area } from "./pointTemplate.js";
 
 export function createLines(paths,  name, location, color = [226, 119, 40]) {
     return {

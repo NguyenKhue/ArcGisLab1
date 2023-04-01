@@ -1,10 +1,18 @@
-import { createPoint } from '../../template/createPoint.js'
+import { createPoint } from '../template/createPoint.js'
+
+var symbol = {
+    type: "picture-marker",
+    url: "https://cdn-icons-png.flaticon.com/512/8/8178.png",
+    width: "24px",
+    height: "24px"
+}
 
 export var TSN = createPoint(
     109.20195214590278,
     12.269494375171012,
     "Trường Đại học Nha Trang",
     "tỉnh Khánh Hòa",
+    symbol
 )
 
 export var KGH = createPoint(
@@ -12,6 +20,7 @@ export var KGH = createPoint(
     12.23511737457715, 
     "Trường Sĩ quan không quân",
     "tỉnh Khánh Hòa",
+    symbol
 )
 
 export var HQH = createPoint(
@@ -19,6 +28,7 @@ export var HQH = createPoint(
     12.24542466286468,  
     "Học Viện Hải Quân",
     "tỉnh Khánh Hòa",
+    symbol
 )
  
 export var UKH = createPoint(
@@ -26,6 +36,7 @@ export var UKH = createPoint(
     12.245652771022888, 
     "Đại học Khánh Hòa",
     "tỉnh Khánh Hòa",
+    symbol
 )
 
 export var TTH = createPoint(
@@ -33,6 +44,7 @@ export var TTH = createPoint(
     12.283540979542042,   
     "Trường Sĩ quan Thông tin - Hệ Quân sự - Đại học Thông tin liên lạc",
     "tỉnh Khánh Hòa",
+    symbol
 )
 
 export var TBD = createPoint(
@@ -40,6 +52,7 @@ export var TBD = createPoint(
     12.285495873994897,  
     "Đại học Thái Bình Dương",
     "tỉnh Khánh Hòa",
+    symbol
 )
 
 export var TCU = createPoint(
@@ -47,6 +60,7 @@ export var TCU = createPoint(
     12.282367138840025, 
     "Trường Sĩ quan Thông tin - Hệ Dân sự - Đại học Thông tin liên lạc",
     "tỉnh Khánh Hòa",
+    symbol
 )
 
 export var UPT = createPoint(
@@ -54,6 +68,7 @@ export var UPT = createPoint(
     10.941222637665543,   
     "Trường Đại học Phan Thiết",
     "tỉnh Bình Thuận",
+    symbol
 )
 
 export var UNL = createPoint(
@@ -61,6 +76,7 @@ export var UNL = createPoint(
     11.601383475121997,    
     "Phân hiệu Đại học Nông Lâm TP. HCM tại Ninh Thuận",
     "tỉnh Ninh Thuận",
+    symbol
 )
 
 
@@ -71,6 +87,7 @@ export var DHA = createPoint(
     16.43718755988419, 
     "Đại học Luật - Đại Học Huế",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 export var DHC = createPoint(
@@ -78,6 +95,7 @@ export var DHC = createPoint(
      16.444128681041,    
     "Khoa Giáo Dục Thể Chất – Đại Học Huế",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 export var DHD = createPoint(
@@ -85,6 +103,7 @@ export var DHD = createPoint(
     16.478494774380838,   
     "Trường Du Lịch Đại học Huế",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 export var DHF = createPoint(
@@ -92,6 +111,7 @@ export var DHF = createPoint(
     16.443234059376028,     
     "Trường Đại Học Ngoại Ngữ Huế",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 export var DHK = createPoint(
@@ -99,6 +119,7 @@ export var DHK = createPoint(
     16.443548987336072,     
     "Trường Đại học Kinh tế, Đại học Huế",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 export var DHL = createPoint(
@@ -106,6 +127,7 @@ export var DHL = createPoint(
     16.477479596168806,     
     "Trường Đại học Nông Lâm Huế",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 export var DHN = createPoint(
@@ -113,6 +135,7 @@ export var DHN = createPoint(
     16.478236923322925,    
     "Trường Đại học Nghệ thuật Huế",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 export var DHS = createPoint(
@@ -120,6 +143,7 @@ export var DHS = createPoint(
     16.467812745285467,   
     "Trường Đại học Sư phạm Huế",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 export var DHT = createPoint(
@@ -127,6 +151,7 @@ export var DHT = createPoint(
     16.45980390595444,     
     "Trường Đại học Khoa học Huế",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 export var DHY = createPoint(
@@ -134,6 +159,7 @@ export var DHY = createPoint(
     16.463033190142188,    
     "Đại Học Y Dược – Đại Học Huế",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 export var DPX = createPoint(
@@ -141,6 +167,7 @@ export var DPX = createPoint(
     16.464563383886077,     
     "Đại Học Dân Lập Phú Xuân",
     "tỉnh Thừa Thiên - Huế",
+    symbol
 )
 
 
@@ -151,20 +178,15 @@ export var DKT = createPoint(
     16.78985058347215,      
     "Phân Hiệu Đại Học Huế tại Quảng Trị",
     "tỉnh Quảng Trị",
+    symbol
 )
 
 // Quảng Bình
-
-export var DHCN = createPoint(
-    106.62373918894752,
-    21.060312436197695,       
-    "Trường Đại học Công nghiệp Quảng Ninh",
-    "tỉnh Quảng Bình",
-)
 
 export var DQB = createPoint(
     106.60804788265331,
     17.481619649017304,       
     "Trường Đại học Quảng Bình",
     "tỉnh Quảng Bình",
+    symbol
 )

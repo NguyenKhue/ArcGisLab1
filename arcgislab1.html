@@ -1,8 +1,8 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>ArcGIS JavaScript Tutorials: Create a Starter App</title>
     <style>
         html,
@@ -30,7 +30,7 @@
         import { HUEHCMHIGHWay } from './provinces/thuathienhue/HCMHighWay.js'
         import { FourtyNineHIGHWay } from './provinces/thuathienhue/49HighWay.js'
         import { OneAHIGHWay } from './provinces/thuathienhue/1AHighWay.js'
-        
+
         import { QTLines } from './provinces/quangtri/QTLines.js'
         import { QTHCMHighWay } from './provinces/quangtri/HCMHighWay.js'
         import { QTHCM1HighWay } from './provinces/quangtri/HCM1HighWay.js'
@@ -53,8 +53,8 @@
         import { QL1AKHLine } from './provinces/KhanhHoa/QL1A.js'
         import { QL26KHLine } from './provinces/KhanhHoa/QL26.js'
 
-        import { TSN, KGH, HQH, UKH, TTH, TBD, TCU, UPT, UNL, DHA, DHC, DHD, DHF, DHK, DHL, DHN, DHS, DHT, DHY, DPX, DKT, DHCN, DQB } from './provinces/KhanhHoa/University.js'
-        import { tpCR, tpDHQT, tpDHQB, tpHue, tpPRTC, tpPT, tpNhaTrang } from './provinces/City.js'
+        import { TSN, KGH, HQH, UKH, TTH, TBD, TCU, UPT, UNL, DHA, DHC, DHD, DHF, DHK, DHL, DHN, DHS, DHT, DHY, DPX, DKT, DQB } from './universities/University.js'
+        import { tpCR, tpDHQT, tpDHQB, tpHue, tpPRTC, tpPT, tpNhaTrang } from './cities/City.js'
 
         import { NALines } from './provinces/NgheAn/NALines.js'
         import { HTLines } from './provinces/HaTinh/HTLines.js'
@@ -71,20 +71,21 @@
             [
                 TSN, KGH, HQH, UKH, TTH, TBD, TCU, UPT, UNL,
                 DHA, DHC, DHD, DHF, DHK, DHL, DHN, DHS, DHT, DHY, DPX,
-                DKT, DHCN, DQB,
+                DKT, DQB,
 
                 //tp 
                 tpCR, tpDHQT, tpDHQB, tpHue, tpPRTC, tpPT, tpNhaTrang
             ]) // add new points here
         var lines = [].concat(
-            [
-                TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, 
+            [   
+                TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines,
                 QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, AH1QB, QBHCMHighWay,
                 BinhThuanLine, NinhThuanLine, KhanhHoaLine,
                 OneABTLine, QL27NTLine, QL28BTLine, QL55BTLine, QL1ANTLine, QL1AKHLine, QL26KHLine,
-                THLines, NALines, HTLines, DLLines, DNLines, LDLines, AH1, HCM, QL7, QL217]) // add new lines here
+                THLines, NALines, HTLines, DLLines, DNLines, LDLines, AH1, HCM, QL7, QL217,
+            ]) // add new lines here
 
-        var jsondata = createData(points, lines)
+        var jsondata = createData(points, lines);
 
         require([
             "esri/Map",
@@ -103,7 +104,7 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center:  [105.852759194, 17.879847283],
+                center: [105.852759194, 17.879847283],
                 zoom: 15,
                 highlightOptions: {
                     color: "blue"
