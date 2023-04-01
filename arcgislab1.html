@@ -35,32 +35,182 @@
       import { tempLines } from "./template/tempLines.js";
       import { createLines } from "./template/createLines.js";
       import { createData } from "./template/createData.js";
-      import { quangNamData } from "./provinces/QuangNam.js";
-      import { quangNgaiData } from "./provinces/QuangNgai.js";
-      import { daNangData } from "./provinces/DaNang.js";
-      import { binhDinhData } from "./provinces/BinhDinh.js";
-      import { AH1Data } from "./nationalRoutes/AH1.js";
-      import { QL14BData } from "./nationalRoutes/QL14B.js";
-      import { QL14GData } from "./nationalRoutes/QL14G.js";
-      import { QL14EData } from "./nationalRoutes/QL14E.js";
-      import { QL14DData } from "./nationalRoutes/QL14D.js";
-      import { QL40BData } from "./nationalRoutes/QL40B.js";
-      import { HoChiMinhRouteData } from "./nationalRoutes/HoChiMinhRoute.js";
 
-      var points = [].concat(tempPoints, []); // add new points here
-      var lines = [].concat(
-        quangNamData.lines,
-        quangNgaiData.lines,
-        daNangData.lines,
-        binhDinhData.lines,
-        AH1Data.lines,
-        QL14BData.lines,
-        QL14GData.lines,
-        QL14EData.lines,
-        QL14DData.lines,
-        QL40BData.lines,
-        HoChiMinhRouteData.lines
-      ); // add new lines here
+      import { QuangNamLine } from "./provinces/QuangNam/QNLine.js";
+      import { QuangNgaiLine } from "./provinces/QuangNgai/QNLine.js";
+      import { DaNangLine } from "./provinces/DaNang/DNLine.js";
+      import { BinhDinhLine } from "./provinces/BinhDinh/BDLine.js";
+      import { AH1DNang } from "./provinces/DaNang/AH1.js";
+      import { AH1QNam } from "./provinces/QuangNam/AH1.js";
+      import { AH1QNgai } from "./provinces/QuangNgai/AH1.js";
+      import { AH1BDinh } from "./provinces/BinhDinh/AH1.js";
+      import { QL14BDNang } from "./provinces/DaNang/QL14B.js";
+      import { QL14BQNam } from "./provinces/QuangNam/QL14B.js";
+      import { QL14GDNang } from "./provinces/DaNang/QL14G.js";
+      import { QL14GQNam } from "./provinces/QuangNam/QL14G.js";
+      import { QL14EQNam } from "./provinces/QuangNam/QL14E.js";
+      import { QL14DQNam } from "./provinces/QuangNam/QL14D.js";
+      import { QL40BQNam } from "./provinces/QuangNam/QL40B.js";
+      import { HoChiMinhRouteQNam } from "./provinces/QuangNam/HoChiMinhRoute.js";
+
+      import { TTHLines } from "./provinces/thuathienhue/TTHLines.js";
+      import { THLines } from "./provinces/ThanhHoa/THLines.js";
+      import { AHOneLeftHIGHWay } from "./provinces/thuathienhue/AH1Left.js";
+      import { HUEHCMHIGHWay } from "./provinces/thuathienhue/HCMHighWay.js";
+      import { FourtyNineHIGHWay } from "./provinces/thuathienhue/49HighWay.js";
+      import { OneAHIGHWay } from "./provinces/thuathienhue/1AHighWay.js";
+      import { QTLines } from "./provinces/quangtri/QTLines.js";
+      import { QTHCMHighWay } from "./provinces/quangtri/HCMHighWay.js";
+      import { QTHCM1HighWay } from "./provinces/quangtri/HCM1HighWay.js";
+      import { AHOneQTHIGHWay } from "./provinces/quangtri/AH1QT.js";
+      import { SixteenHighWay } from "./provinces/quangtri/AH16.js";
+      import { QBLines } from "./provinces/quangbinh/QBLines.js";
+      import { AH1QB } from "./provinces/quangbinh/AH1QB.js";
+
+      import { BinhThuanLine } from "./provinces/BinhThuan/Lines.js";
+      import { OneABTLine } from "./provinces/BinhThuan/1A.js";
+      import { QL28BTLine } from "./provinces/BinhThuan/QL28.js";
+      import { QL55BTLine } from "./provinces/BinhThuan/QL55.js";
+      import { QL27NTLine } from "./provinces/NinhThuan/QL27.js";
+      import { QL1ANTLine } from "./provinces/NinhThuan/QL1A.js";
+
+      import { NinhThuanLine } from "./provinces/NinhThuan/Lines.js";
+      import { KhanhHoaLine } from "./provinces/KhanhHoa/Lines.js";
+      import { QL1AKHLine } from "./provinces/KhanhHoa/QL1A.js";
+      import { QL26KHLine } from "./provinces/KhanhHoa/QL26.js";
+
+      import {
+        TSN,
+        KGH,
+        HQH,
+        UKH,
+        TTH,
+        TBD,
+        TCU,
+        UPT,
+        UNL,
+        DHA,
+        DHC,
+        DHD,
+        DHF,
+        DHK,
+        DHL,
+        DHN,
+        DHS,
+        DHT,
+        DHY,
+        DPX,
+        DKT,
+        DHCN,
+        DQB,
+      } from "./provinces/KhanhHoa/University.js";
+      import {
+        tpCR,
+        tpDHQT,
+        tpDHQB,
+        tpHue,
+        tpPRTC,
+        tpPT,
+        tpNhaTrang,
+      } from "./provinces/City.js";
+
+      import { NALines } from "./provinces/NgheAn/NALines.js";
+      import { HTLines } from "./provinces/HaTinh/HTLines.js";
+      import { QL217 } from "./provinces/ThanhHoa/QL247.js";
+      import { AH1 } from "./provinces/ThanhHoa/AH1.js";
+      import { HCM } from "./provinces/ThanhHoa/HCM.js";
+      import { QL7 } from "./provinces/NgheAn/QL7.js";
+
+      import { DLLines } from "./provinces/DakLak/DLLines.js";
+      import { DNLines } from "/provinces/DakNong/DNLines.js";
+      import { LDLines } from "/provinces/LamDong/LDLines.js";
+
+      var points = [].concat([
+        TSN,
+        KGH,
+        HQH,
+        UKH,
+        TTH,
+        TBD,
+        TCU,
+        UPT,
+        UNL,
+        DHA,
+        DHC,
+        DHD,
+        DHF,
+        DHK,
+        DHL,
+        DHN,
+        DHS,
+        DHT,
+        DHY,
+        DPX,
+        DKT,
+        DHCN,
+        DQB,
+
+        //tp
+        tpCR,
+        tpDHQT,
+        tpDHQB,
+        tpHue,
+        tpPRTC,
+        tpPT,
+        tpNhaTrang,
+      ]); // add new points here
+      var lines = [].concat([
+        TTHLines,
+        HUEHCMHIGHWay,
+        OneAHIGHWay,
+        AHOneLeftHIGHWay,
+        FourtyNineHIGHWay,
+        QTLines,
+        QTHCMHighWay,
+        QTHCM1HighWay,
+        AHOneQTHIGHWay,
+        SixteenHighWay,
+        QBLines,
+        AH1QB,
+        BinhThuanLine,
+        NinhThuanLine,
+        KhanhHoaLine,
+
+        QuangNamLine,
+        QuangNgaiLine,
+        DaNangLine,
+        BinhDinhLine,
+        AH1QNam,
+        AH1BDinh,
+        AH1DNang,
+        AH1QNgai,
+        QL14BQNam,
+        QL14BDNang,
+        QL14GDNang,
+        QL14GQNam,
+        QL14EQNam,
+        QL14DQNam,
+        QL40BQNam,
+        HoChiMinhRouteQNam,
+
+        OneABTLine,
+        QL27NTLine,
+        QL28BTLine,
+        QL55BTLine,
+        QL1ANTLine,
+        QL1AKHLine,
+        QL26KHLine,
+        THLines,
+        NALines,
+        HTLines,
+        DLLines,
+        DNLines,
+        LDLines,
+        AH1,
+        HCM,
+        QL7,
+        QL217,
+      ]); // add new lines here
 
       var jsondata = createData(points, lines);
 
@@ -71,7 +221,7 @@
         "esri/layers/GraphicsLayer",
       ], function (Map, MapView, Graphic, GraphicsLayer) {
         var map = new Map({
-          basemap: "topo-vector",
+          basemap: "streets-navigation-vector",
         });
         map.on("load", function () {
           map.graphics.enableMouseEvents();
@@ -80,8 +230,8 @@
         var view = new MapView({
           container: "viewDiv",
           map: map,
-          center: [108.341030481, 15.714779134],
-          zoom: 12,
+          center: [106.558484079, 17.503991374],
+          zoom: 15,
           highlightOptions: {
             color: "blue",
           },
