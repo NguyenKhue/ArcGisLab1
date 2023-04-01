@@ -1,8 +1,8 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>ArcGIS JavaScript Tutorials: Create a Starter App</title>
     <style>
         html,
@@ -15,20 +15,107 @@
         }
     </style>
 
-    <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css">
-    <script src="https://js.arcgis.com/4.15/"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.26/"></script>
 
     <script type="module">
         import { point_template_tree, point_template_light, point_template_chair, point_template_area, point_template_university } from './template/pointTemplate.js';
         import { tempPoints } from './template/tempPoints.js'
         import { tempLines } from './template/tempLines.js'
-        import { createLines } from './template/createLines.js'
         import { createData } from './template/createData.js'
 
-        var points =  [].concat(tempPoints, []) // add new points here
-        var lines =  [].concat(tempLines, []) // add new lines here
+        import { TTHLines } from './provinces/thuathienhue/TTHLines.js'
+        import { THLines } from './provinces/ThanhHoa/THLines.js'
+        import { AHOneLeftHIGHWay } from './provinces/thuathienhue/AH1Left.js'
+        import { HUEHCMHIGHWay } from './provinces/thuathienhue/HCMHighWay.js'
+        import { FourtyNineHIGHWay } from './provinces/thuathienhue/49HighWay.js'
+        import { OneAHIGHWay } from './provinces/thuathienhue/1AHighWay.js'
 
-        var jsondata = createData(points, lines)
+        import { QTLines } from './provinces/quangtri/QTLines.js'
+        import { QTHCMHighWay } from './provinces/quangtri/HCMHighWay.js'
+        import { QTHCM1HighWay } from './provinces/quangtri/HCM1HighWay.js'
+        import { AHOneQTHIGHWay } from './provinces/quangtri/AH1QT.js'
+        import { SixteenHighWay } from './provinces/quangtri/AH16.js'
+
+        import { QBLines } from './provinces/quangbinh/QBLines.js'
+        import { AH1QB } from './provinces/quangbinh/AH1QB.js'
+        import { QBHCMHighWay } from './provinces/quangbinh/HCMQB.js'
+
+        import { BinhThuanLine } from './provinces/BinhThuan/Lines.js'
+        import { OneABTLine } from './provinces/BinhThuan/1A.js'
+        import { QL28BTLine } from './provinces/BinhThuan/QL28.js'
+        import { QL55BTLine } from './provinces/BinhThuan/QL55.js'
+        import { QL27NTLine } from './provinces/NinhThuan/QL27.js'
+        import { QL1ANTLine } from './provinces/NinhThuan/QL1A.js'
+
+        import { NinhThuanLine } from './provinces/NinhThuan/Lines.js'
+        import { KhanhHoaLine } from './provinces/KhanhHoa/Lines.js'
+        import { QL1AKHLine } from './provinces/KhanhHoa/QL1A.js'
+        import { QL26KHLine } from './provinces/KhanhHoa/QL26.js'
+
+        import { TSN, KGH, HQH, UKH, TTH, TBD, TCU, UPT, UNL, DHA, DHC, DHD, DHF, DHK, DHL, DHN, DHS, DHT, DHY, DPX, DKT, DQB } from './universities/University.js'
+        import { tpCR, tpDHQT, tpDHQB, tpHue, tpPRTC, tpPT, tpNhaTrang } from './cities/City.js'
+
+        import { NALines } from './provinces/NgheAn/NALines.js'
+        import { HTLines } from './provinces/HaTinh/HTLines.js'
+        import { QL217 } from './provinces/ThanhHoa/QL247.js'
+        import { AH1 } from './provinces/ThanhHoa/AH1.js'
+        import { HCM } from './provinces/ThanhHoa/HCM.js'
+        import { QL7 } from './provinces/NgheAn/QL7.js'
+
+        import { DLLines } from './provinces/DakLak/DLLines.js'
+        import { DNLines } from '/provinces/DakNong/DNLines.js'
+        import { LDLines } from '/provinces/LamDong/LDLines.js'
+
+        import { KTLines } from './provinces/KonTum/KTLines.js'
+        import { GLLines } from './provinces/GiaLai/GLLines.js'
+        import { PYLines } from './provinces/PhuYen/PYLines.js'
+
+        import { BinhDinhLine } from './provinces/BinhDinh/BDLine.js'
+        import { AH1BDinh } from './provinces/BinhDinh/AH1.js'
+
+
+        import { DaNangLine } from './provinces/DaNang/DNLine.js'
+        import { AH1DNang } from './provinces/DaNang/AH1.js'
+        import { QL14BDNang } from './provinces/DaNang/QL14B.js'
+        import { QL14GDNang } from './provinces/DaNang/QL14G.js'
+
+        import { QuangNamLine } from './provinces/QuangNam/QNLine.js'
+        import { AH1QNam } from './provinces/QuangNam/AH1.js'
+        import { HoChiMinhRouteQNam } from './provinces/QuangNam/HoChiMinhRoute.js'
+        import { QL14BQNam } from './provinces/QuangNam/QL14B.js'
+        import { QL14DQNam } from './provinces/QuangNam/QL14D.js'
+        import { QL14EQNam } from './provinces/QuangNam/QL14E.js'
+        import { QL14GQNam } from './provinces/QuangNam/QL14G.js'
+        import { QL40BQNam } from './provinces/QuangNam/QL40B.js'
+
+        import { QuangNgaiLine } from './provinces/QuangNgai/QNLine.js'
+        import { AH1QNgai } from './provinces/QuangNgai/AH1.js'
+
+        var points = [].concat(
+            [
+                TSN, KGH, HQH, UKH, TTH, TBD, TCU, UPT, UNL,
+                DHA, DHC, DHD, DHF, DHK, DHL, DHN, DHS, DHT, DHY, DPX,
+                DKT, DQB,
+
+                //tp 
+                tpCR, tpDHQT, tpDHQB, tpHue, tpPRTC, tpPT, tpNhaTrang
+            ]) // add new points here
+        var lines = [].concat(
+            [
+                TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines,
+                QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, AH1QB, QBHCMHighWay,
+                BinhThuanLine, NinhThuanLine, KhanhHoaLine,
+                OneABTLine, QL27NTLine, QL28BTLine, QL55BTLine, QL1ANTLine, QL1AKHLine, QL26KHLine,
+                THLines, NALines, HTLines, DLLines, DNLines, LDLines, AH1, HCM, QL7, QL217, KTLines, GLLines, PYLines,
+                BinhDinhLine, AH1BDinh,
+                DaNangLine, AH1DNang, QL14BDNang, QL14GDNang,
+                QuangNamLine, AH1QNam, HoChiMinhRouteQNam, QL14BQNam, QL14DQNam, QL14EQNam, QL14GQNam, QL40BQNam,
+                QuangNgaiLine, AH1QNgai
+
+            ]) // add new lines here
+
+        var jsondata = createData(points, lines);
 
         require([
             "esri/Map",
@@ -38,7 +125,7 @@
         ], function (Map, MapView, Graphic, GraphicsLayer) {
 
             var map = new Map({
-                basemap: "topo-vector"
+                basemap: "streets-navigation-vector"
             });
             map.on("load", function () {
                 map.graphics.enableMouseEvents();
@@ -47,8 +134,8 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [107.778019804, 15.86153673],
-                zoom: 12,
+                center: [105.852759194, 17.879847283],
+                zoom: 15,
                 highlightOptions: {
                     color: "blue"
                 }

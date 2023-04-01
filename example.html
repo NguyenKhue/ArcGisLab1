@@ -12,8 +12,8 @@
     }
   </style>
   
-    <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.15/"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.26/"></script>
   
   <script>
 	var point_template_tree = {
@@ -45,47 +45,13 @@
 				Name: "Cây xanh 01",
 				Location: "trong khuông viên trường ĐH KHTN",
 				symbol: {
-					type: "simple-marker",
-					color: [0, 153, 51],
-					outline: {
-						color: [255, 255, 255],
-						width: 1
-					}
+					type: "picture-marker",
+					url: "https://cdn-icons-png.flaticon.com/512/8/8178.png",
+					width: "24px",
+					height: "24px"
 				},
 				popupTemplate: point_template_tree
 			},
-			{
-				type: "point",
-				longitude: 106.79597871846113, 
-				latitude: 10.872455347930213,
-				Name: "Bóng Đèn 01",
-				Location: "trong khuông viên trường ĐH TDTT",
-				symbol: {
-					type: "simple-marker",
-					color: [255, 204, 0],
-					outline: {
-						color: [255, 255, 255],
-						width: 1
-					}
-				},
-				popupTemplate: point_template_light
-			},
-			{
-				type: "point",
-				longitude: 106.80378931111271, 
-				latitude: 10.870369163501929,
-				Name: "Ghế ngồi",
-				Location: "trong khuông viên trường ĐH CNTT",
-				symbol: {
-					type: "simple-marker",
-					color: [153, 51, 51],
-					outline: {
-						color: [255, 255, 255],
-						width: 1
-					}
-				},
-				popupTemplate: point_template_chair
-			}
 		],
 		"lines":[
 			{
@@ -223,6 +189,7 @@
 			
 		]
 	};
+
     require([
       "esri/Map",
       "esri/views/MapView",
