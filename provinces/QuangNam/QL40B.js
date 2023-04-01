@@ -2944,5 +2944,4 @@ export var QL40BQNam = createLines(
   ],
   "Quốc lộ 40B",
   "Quốc lộ này đi qua địa phận tỉnh Quảng Nam",
-  [40, 42, 54]
 );

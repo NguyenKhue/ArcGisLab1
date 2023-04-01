@@ -1445,5 +1445,4 @@ export var AH1QNam = createLines(
   ],
   "Quốc lộ 1",
   "Đi qua địa phận tỉnh Quảng Nam",
-  [40, 42, 54]
 );

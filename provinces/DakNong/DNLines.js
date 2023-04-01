@@ -2494,4 +2494,4 @@ var path = [
   [107.983378258841, 12.102301491382212],
 ];
 
-export var DNLines = createLines(path, "Đăk Nông", "Đăk Nông");
+export var DNLines = createLines(path, "Đăk Nông", "Đăk Nông", [13, 106, 57]);

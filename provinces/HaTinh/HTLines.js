@@ -1750,4 +1750,4 @@ var path2 = [
   ],
 ]
 
-export var HTLines = createLines(path2.flat(), "Hà Tĩnh", "Hà Tĩnh")
+export var HTLines = createLines(path2.flat(), "Hà Tĩnh", "Hà Tĩnh", [196, 190, 120])

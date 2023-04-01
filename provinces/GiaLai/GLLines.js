@@ -7685,4 +7685,4 @@ var paths = [
     
 ]
 
-export var GLLines = createLines(paths,"Gia Lai","Gia Lai")
+export var GLLines = createLines(paths,"Gia Lai","Gia Lai", [2, 5, 153])

@@ -8625,5 +8625,4 @@ export var DaNangLine = createLines(
   ],
   "Đường biên giới",
   "Đà Nẵng",
-  [200, 0, 0]
 );

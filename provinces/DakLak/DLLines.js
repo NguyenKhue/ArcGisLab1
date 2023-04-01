@@ -6853,4 +6853,4 @@ var path = [
   [108.99353974944296, 12.706270368679524],
 ];
 
-export var DLLines = createLines(path, "Đăk Lăk", "Đăk Lăk");
+export var DLLines = createLines(path, "Đăk Lăk", "Đăk Lăk", [  3, 59, 192]);

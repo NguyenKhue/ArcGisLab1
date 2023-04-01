@@ -3770,5 +3770,5 @@ export var BinhDinhLine = createLines(
   ],
   "Đường biên giới",
   "Bình Định",
-  [0, 110, 255]
+  [135, 78, 197],
 );

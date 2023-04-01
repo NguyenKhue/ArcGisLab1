@@ -1649,5 +1649,4 @@ export var AH1QNgai = createLines(
   ],
   "Quốc lộ 1",
   "Đi qua địa phận tỉnh Quảng Ngãi",
-  [40, 42, 54]
 );

@@ -7984,4 +7984,4 @@ var paths = [
     ]
 ]
 
-export var KhanhHoaLine = createLines(paths.flat(), "Khánh Hòa", "tỉnh Khánh Hòa")
+export var KhanhHoaLine = createLines(paths.flat(), "Khánh Hòa", "tỉnh Khánh Hòa", [92, 80, 221])
