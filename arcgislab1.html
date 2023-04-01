@@ -53,7 +53,7 @@
         import { QL1AKHLine } from './provinces/KhanhHoa/QL1A.js'
         import { QL26KHLine } from './provinces/KhanhHoa/QL26.js'
         import * as universities from './universities/University.js'
-        import { tpCR, tpDHQT, tpDHQB, tpHue, tpPRTC, tpPT, tpNhaTrang } from './cities/City.js'
+        import * as cities from './cities/City.js'
 
         import { NALines } from './provinces/NgheAn/NALines.js'
         import { HTLines } from './provinces/HaTinh/HTLines.js'
@@ -92,12 +92,11 @@
         import { AH1QNgai } from './provinces/QuangNgai/AH1.js'
 
         const arrUniversity = Object.values(universities)
+        const arrCity = Object.values(cities)
         var points = [].concat(
             [
-                ...arrUniversity,
-
-                //tp 
-                tpCR, tpDHQT, tpDHQB, tpHue, tpPRTC, tpPT, tpNhaTrang
+                ...arrUniversity, // dai hoc
+                ...arrCity, // tp
             ]) // add new points here
         var lines = [].concat(
             [
