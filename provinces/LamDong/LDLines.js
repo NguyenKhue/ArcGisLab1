@@ -2076,4 +2076,4 @@ var path = [
   [108.58271849563762, 11.555470091637169],
 ];
 
-export var LDLines = createLines(path, "Lâm Đồng", "Lâm Đồng");
+export var LDLines = createLines(path, "Lâm Đồng", "Lâm Đồng", [192, 71, 198]);

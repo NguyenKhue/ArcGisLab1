@@ -8142,4 +8142,4 @@ var path2 = [
   ]
 ]
 
-export var NALines = createLines(path2, "Nghệ An", "Nghệ An")
+export var NALines = createLines(path2, "Nghệ An", "Nghệ An", [36, 131, 81])

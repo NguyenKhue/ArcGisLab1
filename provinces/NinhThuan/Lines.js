@@ -2936,4 +2936,4 @@ var paths = [
     ],
 ]
 
-export var NinhThuanLine = createLines(paths.flat(), "Ninh Thuận", "tỉnh Ninh Thuận")
+export var NinhThuanLine = createLines(paths.flat(), "Ninh Thuận", "tỉnh Ninh Thuận", [85, 152, 203])

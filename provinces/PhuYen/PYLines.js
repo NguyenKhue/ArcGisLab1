@@ -3324,4 +3324,4 @@ var paths = [
 
 ]
 
-export var PYLines = createLines(paths,"Phú Yên","tỉnh Phú Yên")
+export var PYLines = createLines(paths,"Phú Yên","tỉnh Phú Yên", [119, 190, 90])

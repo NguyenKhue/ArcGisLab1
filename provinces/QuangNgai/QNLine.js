@@ -5614,4 +5614,5 @@ export var QuangNgaiLine = createLines(
   ],
   "Đường biên giới",
   "tỉnh Quảng Ngãi",
+  [110, 115, 55]
 );

@@ -5966,5 +5966,5 @@ var path2 = [
   ]
 ]
 
-export var THLines = createLines(path2.flat(), "Thanh Hóa", "Thanh Hóa")
+export var THLines = createLines(path2.flat(), "Thanh Hóa", "Thanh Hóa", [10, 69, 104])
 

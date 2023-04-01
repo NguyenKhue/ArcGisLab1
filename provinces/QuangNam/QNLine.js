@@ -9842,4 +9842,5 @@ export var QuangNamLine = createLines(
   ],
   "Đường biên giới",
   "tỉnh Quảng Nam",
+  [39, 122, 233]
 );

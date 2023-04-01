@@ -4424,7 +4424,7 @@ var path = [
 ]
 
 var finalPath = bd.reverse().concat(path)
-export var QBLines = createLines(finalPath, "Quảng Bình", "Quảng Bình")
+export var QBLines = createLines(finalPath, "Quảng Bình", "Quảng Bình", [201, 179, 62])
 
 
 

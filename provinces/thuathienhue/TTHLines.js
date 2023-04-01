@@ -8434,4 +8434,4 @@ var path = [
     [108.194500394, 16.209649738],
 ]
 
-export var TTHLines = createLines(path, "Thừa Thiên Huế", "Thừa Thiên Huế")
+export var TTHLines = createLines(path, "Thừa Thiên Huế", "Thừa Thiên Huế", [75, 8, 173])
