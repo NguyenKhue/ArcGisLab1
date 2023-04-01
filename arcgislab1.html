@@ -70,6 +70,28 @@
         import { KTLines } from './provinces/KonTum/KTLines.js'
         import { GLLines } from './provinces/GiaLai/GLLines.js'
         import { PYLines } from './provinces/PhuYen/PYLines.js'
+
+        import { BinhDinhLine } from './provinces/BinhDinh/BDLine.js'
+        import { AH1BDinh } from './provinces/BinhDinh/AH1.js'
+
+
+        import { DaNangLine } from './provinces/DaNang/DNLine.js'
+        import { AH1DNang } from './provinces/DaNang/AH1.js'
+        import { QL14BDNang } from './provinces/DaNang/QL14B.js'
+        import { QL14GDNang } from './provinces/DaNang/QL14G.js'
+
+        import { QuangNamLine } from './provinces/QuangNam/QNLine.js'
+        import { AH1QNam } from './provinces/QuangNam/AH1.js'
+        import { HoChiMinhRouteQNam } from './provinces/QuangNam/HoChiMinhRoute.js'
+        import { QL14BQNam } from './provinces/QuangNam/QL14B.js'
+        import { QL14DQNam } from './provinces/QuangNam/QL14D.js'
+        import { QL14EQNam } from './provinces/QuangNam/QL14E.js'
+        import { QL14GQNam } from './provinces/QuangNam/QL14G.js'
+        import { QL40BQNam } from './provinces/QuangNam/QL40B.js'
+
+        import { QuangNgaiLine } from './provinces/QuangNgai/QNLine.js'
+        import { AH1QNgai } from './provinces/QuangNgai/AH1.js'
+
         var points = [].concat(
             [
                 TSN, KGH, HQH, UKH, TTH, TBD, TCU, UPT, UNL,
@@ -80,13 +102,19 @@
                 tpCR, tpDHQT, tpDHQB, tpHue, tpPRTC, tpPT, tpNhaTrang
             ]) // add new points here
         var lines = [].concat(
-            [   
+            [
                 TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines,
                 QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, AH1QB, QBHCMHighWay,
                 BinhThuanLine, NinhThuanLine, KhanhHoaLine,
                 OneABTLine, QL27NTLine, QL28BTLine, QL55BTLine, QL1ANTLine, QL1AKHLine, QL26KHLine,
-                THLines, NALines, HTLines, DLLines, DNLines, LDLines, AH1, HCM, QL7, QL217, KTLines, GLLines,PYLines]) // add new lines here
-                
+                THLines, NALines, HTLines, DLLines, DNLines, LDLines, AH1, HCM, QL7, QL217, KTLines, GLLines, PYLines,
+                BinhDinhLine, AH1BDinh,
+                DaNangLine, AH1DNang, QL14BDNang, QL14GDNang,
+                QuangNamLine, AH1QNam, HoChiMinhRouteQNam, QL14BQNam, QL14DQNam, QL14EQNam, QL14GQNam, QL40BQNam,
+                QuangNgaiLine, AH1QNgai
+
+            ]) // add new lines here
+
         var jsondata = createData(points, lines);
 
         require([
