@@ -23,19 +23,23 @@
         import { tempPoints } from './template/tempPoints.js'
         import { tempLines } from './template/tempLines.js'
         import { createData } from './template/createData.js'
+
         import { TTHLines } from './provinces/thuathienhue/TTHLines.js'
         import { THLines } from './provinces/ThanhHoa/THLines.js'
         import { AHOneLeftHIGHWay } from './provinces/thuathienhue/AH1Left.js'
         import { HUEHCMHIGHWay } from './provinces/thuathienhue/HCMHighWay.js'
         import { FourtyNineHIGHWay } from './provinces/thuathienhue/49HighWay.js'
         import { OneAHIGHWay } from './provinces/thuathienhue/1AHighWay.js'
+        
         import { QTLines } from './provinces/quangtri/QTLines.js'
         import { QTHCMHighWay } from './provinces/quangtri/HCMHighWay.js'
         import { QTHCM1HighWay } from './provinces/quangtri/HCM1HighWay.js'
         import { AHOneQTHIGHWay } from './provinces/quangtri/AH1QT.js'
         import { SixteenHighWay } from './provinces/quangtri/AH16.js'
+
         import { QBLines } from './provinces/quangbinh/QBLines.js'
         import { AH1QB } from './provinces/quangbinh/AH1QB.js'
+        import { QBHCMHighWay } from './provinces/quangbinh/HCMQB.js'
 
         import { BinhThuanLine } from './provinces/BinhThuan/Lines.js'
         import { OneABTLine } from './provinces/BinhThuan/1A.js'
@@ -74,7 +78,8 @@
             ]) // add new points here
         var lines = [].concat(
             [
-                TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, AH1QB,
+                TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines, 
+                QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, AH1QB, QBHCMHighWay,
                 BinhThuanLine, NinhThuanLine, KhanhHoaLine,
                 OneABTLine, QL27NTLine, QL28BTLine, QL55BTLine, QL1ANTLine, QL1AKHLine, QL26KHLine,
                 THLines, NALines, HTLines, DLLines, DNLines, LDLines, AH1, HCM, QL7, QL217]) // add new lines here
@@ -98,7 +103,7 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [106.558484079, 17.503991374],
+                center:  [105.852759194, 17.879847283],
                 zoom: 15,
                 highlightOptions: {
                     color: "blue"
