@@ -62,3 +62,15 @@ export var tpPT = createPoint(
     "tỉnh Thừa Bình Thuận",
     symbol
 )
+
+// -----
+export var BuonMaThuoCity = createPoint(
+    108.0083,
+    12.6654,
+    "Thành Phố Buôn Ma Thuột",
+    "tỉnh Đắk Lắk",
+    symbol
+)
+
+
+
