@@ -39,7 +39,13 @@
       import { quangNgaiData } from "./provinces/QuangNgai.js";
       import { daNangData } from "./provinces/DaNang.js";
       import { binhDinhData } from "./provinces/BinhDinh.js";
-      import { NR1Data } from "./nationalRoutes/NR1.js";
+      import { AH1Data } from "./nationalRoutes/AH1.js";
+      import { QL14BData } from "./nationalRoutes/QL14B.js";
+      import { QL14GData } from "./nationalRoutes/QL14G.js";
+      import { QL14EData } from "./nationalRoutes/QL14E.js";
+      import { QL14DData } from "./nationalRoutes/QL14D.js";
+      import { QL40BData } from "./nationalRoutes/QL40B.js";
+      import { HoChiMinhRouteData } from "./nationalRoutes/HoChiMinhRoute.js";
 
       var points = [].concat(tempPoints, []); // add new points here
       var lines = [].concat(
@@ -47,7 +53,13 @@
         quangNgaiData.lines,
         daNangData.lines,
         binhDinhData.lines,
-        NR1Data.lines
+        AH1Data.lines,
+        QL14BData.lines,
+        QL14GData.lines,
+        QL14EData.lines,
+        QL14DData.lines,
+        QL40BData.lines,
+        HoChiMinhRouteData.lines
       ); // add new lines here
 
       var jsondata = createData(points, lines);
@@ -68,7 +80,7 @@
         var view = new MapView({
           container: "viewDiv",
           map: map,
-          center: [107.778019804, 15.86153673],
+          center: [108.341030481, 15.714779134],
           zoom: 12,
           highlightOptions: {
             color: "blue",
