@@ -67,6 +67,9 @@
         import { DNLines } from '/provinces/DakNong/DNLines.js'
         import { LDLines } from '/provinces/LamDong/LDLines.js'
 
+        import { KTLines } from './provinces/KonTum/KTLines.js'
+        import { GLLines } from './provinces/GiaLai/GLLines.js'
+        import { PYLines } from './provinces/PhuYen/PYLines.js'
         var points = [].concat(
             [
                 TSN, KGH, HQH, UKH, TTH, TBD, TCU, UPT, UNL,
@@ -82,9 +85,8 @@
                 QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, AH1QB, QBHCMHighWay,
                 BinhThuanLine, NinhThuanLine, KhanhHoaLine,
                 OneABTLine, QL27NTLine, QL28BTLine, QL55BTLine, QL1ANTLine, QL1AKHLine, QL26KHLine,
-                THLines, NALines, HTLines, DLLines, DNLines, LDLines, AH1, HCM, QL7, QL217,
-            ]) // add new lines here
-
+                THLines, NALines, HTLines, DLLines, DNLines, LDLines, AH1, HCM, QL7, QL217, KTLines, GLLines,PYLines]) // add new lines here
+                
         var jsondata = createData(points, lines);
 
         require([
