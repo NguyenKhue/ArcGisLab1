@@ -15,7 +15,7 @@ export var point_template_chair = {
 
 export var point_template_area = {
   title: "{Name}",
-  content: "Khu vực này ở <b>{Location}</b>.",
+  content: "<b>{Location}</b>.",
 };
 
 export var point_template_university = {
