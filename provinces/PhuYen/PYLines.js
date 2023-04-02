@@ -3324,4 +3324,4 @@ var paths = [
 
 ]
 
-export var PYLines = createPolygon(paths,"Phú Yên","tỉnh Phú Yên")
+export var PYLines = createPolygon(paths,"Phú Yên",5045.3,	1012171,[186, 200, 189])

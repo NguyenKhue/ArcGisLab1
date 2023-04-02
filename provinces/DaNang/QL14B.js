@@ -634,5 +634,4 @@ export var QL14BDNang = createLines(
   ],
   "Quốc lộ 14B",
   "Quốc lộ này đi qua địa phận tỉnh Đà Nẵng",
-  [40, 42, 54]
 );

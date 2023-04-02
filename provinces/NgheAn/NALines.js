@@ -8142,4 +8142,4 @@ var path2 = [
   ]
 ]
 
-export var NALines = createPolygon(path2, "Nghệ An", "Nghệ An")
+export var NALines = createPolygon(path2, "Nghệ An", 16493.7, 3727791, [169, 222, 230])

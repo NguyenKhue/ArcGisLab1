@@ -7448,4 +7448,4 @@ var paths = [
 
 ]
 
-export var KTLines = createPolygon(paths,"Kon Tum","tỉnh Kon Tum")
+export var KTLines = createPolygon(paths,"Kon Tum",9674.5, 661742,[167, 214, 254])

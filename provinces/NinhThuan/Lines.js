@@ -2728,4 +2728,4 @@ var paths = [
     ],
 ]
 
-export var NinhThuanLine = createPolygon(paths.flat(), "Ninh Thuận", "tỉnh Ninh Thuận")
+export var NinhThuanLine = createPolygon(paths.flat(), "Ninh Thuận", 3358, 679467, [152, 191, 143])

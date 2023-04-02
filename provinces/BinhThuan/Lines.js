@@ -12983,5 +12983,7 @@ var paths = [
 export var BinhThuanLine = createPolygon(
   paths.flat(),
   "Bình Thuận",
-  "tỉnh Bình Thuận"
+  7992,
+  1632808,
+  [243, 214, 154]
 );

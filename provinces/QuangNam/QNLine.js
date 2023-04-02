@@ -9840,7 +9840,8 @@ export var QuangNamLine = createPolygon(
       [108.69043906902348, 15.812460843257336],
     ],
   ],
-  "Đường biên giới",
-  "tỉnh Quảng Nam",
-  [96, 101, 130]
+  "Quảng Nam",
+  10438.4,
+  1945812,
+  [190, 152, 151]
 );

@@ -8434,4 +8434,4 @@ var path = [
     [108.194500394, 16.209649738],
 ]
 
-export var TTHLines = createPolygon(path, "Thừa Thiên Huế", "Thừa Thiên Huế")
+export var TTHLines = createPolygon(path, "Thừa Thiên Huế", 5033.2, 1319700, [225, 236, 159])

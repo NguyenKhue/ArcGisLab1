@@ -1,19 +1,21 @@
-import { point_template_area } from "./pointTemplate.js";
+import { info_province_template } from "./pointTemplate.js";
 
-export function createPolygon(paths,  name, location, color = [226, 119, 40]) {
+export function createPolygon(paths,  name, area, population, color = [226, 119, 40]) {
     return {
         type: "polygon",
         rings: paths,
         symbol: {
             type: "simple-fill",
-            color: [227, 139, 79, 0.4],
+            color: [...color, 0.4],
             outline: {
                 color: color,
                 width: 1
             }
         },
-        Name: name,
-        Location: location,
-        popupTemplate: point_template_area
+        PROVINCE_NAME: name,
+        PROVINCE_AREA: area,
+        PROVINCE_POPULATION: population,
+        popupTemplate: info_province_template,
+        
     }
 }

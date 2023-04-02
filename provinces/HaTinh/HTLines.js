@@ -3278,4 +3278,4 @@ var path2 = [
 
 ]
 
-export var HTLines = createPolygon(path2.flat(), "Hà Tĩnh", "Hà Tĩnh")
+export var HTLines = createPolygon(path2.flat(), "Hà Tĩnh", 5997.8, 1501866, [192, 197, 229])

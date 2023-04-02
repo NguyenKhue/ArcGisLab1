@@ -4424,7 +4424,7 @@ var path = [
 ]
 
 var finalPath = bd.reverse().concat(path)
-export var QBLines = createPolygon(finalPath, "Quảng Bình", "Quảng Bình")
+export var QBLines = createPolygon(finalPath, "Quảng Bình", 8065.8, 1003430, [149, 191, 138])
 
 
 

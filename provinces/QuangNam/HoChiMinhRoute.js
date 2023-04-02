@@ -2092,5 +2092,4 @@ export var HoChiMinhRouteQNam = createLines(
   ],
   "Đường Hồ Chí Minh",
   "Đường này đi qua địa phận tỉnh Quảng Nam",
-  [40, 42, 54]
 );

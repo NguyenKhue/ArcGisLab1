@@ -5966,5 +5966,5 @@ var path2 = [
   ]
 ]
 
-export var THLines = createPolygon(path2.flat(), "Thanh Hóa", "Thanh Hóa")
+export var THLines = createPolygon(path2.flat(), "Thanh Hóa", 	11129.5, 	3673900, [248, 230, 158])
 

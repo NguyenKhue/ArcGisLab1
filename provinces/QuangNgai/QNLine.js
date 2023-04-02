@@ -5617,7 +5617,8 @@ export var QuangNgaiLine = createPolygon(
       [109.07722729424307, 15.427391020940883],
     ],
   ],
-  "Đường biên giới",
-  "tỉnh Quảng Ngãi",
-  [0, 200, 0]
+  "Quảng Ngãi",
+  5137.6,
+  1631697,
+  [149, 191, 138],
 );
