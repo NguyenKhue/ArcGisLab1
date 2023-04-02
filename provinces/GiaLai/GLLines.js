@@ -1,4 +1,4 @@
-import { createLines } from '../../template/createLines.js'
+import { createPolygon } from "../../template/createPolygon.js"
 
 var paths = [
 
@@ -7685,4 +7685,4 @@ var paths = [
     
 ]
 
-export var GLLines = createLines(paths,"Gia Lai","Gia Lai")
+export var GLLines = createPolygon(paths,"Gia Lai",15510.9, 1641829,[242, 217, 144])

@@ -1,4 +1,4 @@
-import { createLines } from '../../template/createLines.js'
+import { createPolygon } from "../../template/createPolygon.js"
 
 
 var paths = [
@@ -7984,4 +7984,4 @@ var paths = [
     ]
 ]
 
-export var KhanhHoaLine = createLines(paths.flat(), "Khánh Hòa", "tỉnh Khánh Hòa")
+export var KhanhHoaLine = createPolygon(paths.flat(), "Khánh Hòa", 5217.6, 1520099, [189, 180, 149] )

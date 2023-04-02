@@ -1724,5 +1724,4 @@ export var AH1DNang = createLines(
   ],
   "Quốc lộ 1",
   "Quốc lộ này đi qua địa phận tỉnh Đà Nẵng",
-  [40, 42, 54]
 );

@@ -1,18 +1,18 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>ArcGIS JavaScript Tutorials: Create a Starter App</title>
-    <style>
-        html,
-        body,
-        #viewDiv {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>ArcGIS JavaScript Tutorials: Create a Starter App</title>
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
     </style>
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
@@ -40,6 +40,7 @@
         import { QBLines } from './provinces/quangbinh/QBLines.js'
         import { AH1QB } from './provinces/quangbinh/AH1QB.js'
         import { QBHCMHighWay } from './provinces/quangbinh/HCMQB.js'
+        import { AH131QB } from './provinces/quangbinh/AH131QB.js'
 
         import { BinhThuanLine } from './provinces/BinhThuan/Lines.js'
         import { OneABTLine } from './provinces/BinhThuan/1A.js'
@@ -101,7 +102,7 @@
         var lines = [].concat(
             [
                 TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines,
-                QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, AH1QB, QBHCMHighWay,
+                QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, AH1QB, QBHCMHighWay, AH131QB,
                 BinhThuanLine, NinhThuanLine, KhanhHoaLine,
                 OneABTLine, QL27NTLine, QL28BTLine, QL55BTLine, QL1ANTLine, QL1AKHLine, QL26KHLine,
                 THLines, NALines, HTLines, DLLines, DNLines, LDLines, AH1, HCM, QL7, QL217, KTLines, GLLines, PYLines,
@@ -131,7 +132,7 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [105.852759194, 17.879847283],
+                center:    [105.854767162, 17.880216533],
                 zoom: 15,
                 highlightOptions: {
                     color: "blue"
@@ -156,12 +157,13 @@
                 graphicsLayer.add(createGraphic(data));
             });
             map.add(graphicsLayer);
-        });
-    </script>
+     
+    });
+  </script>
 </head>
 
 <body>
-    <div id="viewDiv"></div>
+  <div id="viewDiv"></div>
 </body>
 
 </html>

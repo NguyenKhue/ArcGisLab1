@@ -2513,5 +2513,4 @@ export var QL14DQNam = createLines(
   ],
   "Quốc lộ 14D",
   "Quốc lộ này đi qua địa phận tỉnh Quảng Nam",
-  [40, 42, 54]
 );

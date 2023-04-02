@@ -1,4 +1,4 @@
-import { createLines } from "../../template/createLines.js"
+import { createPolygon } from "../../template/createPolygon.js"
 
 var path = [
   // Bắt đầu biên giới Thanh Hóa - Nghệ An
@@ -5966,5 +5966,5 @@ var path2 = [
   ]
 ]
 
-export var THLines = createLines(path2.flat(), "Thanh Hóa", "Thanh Hóa")
+export var THLines = createPolygon(path2.flat(), "Thanh Hóa", 	11129.5, 	3673900, [248, 230, 158])
 
