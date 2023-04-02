@@ -1,6 +1,6 @@
-import { createLines } from "../../template/createLines.js";
+import { createPolygon } from "../../template/createPolygon.js"
 
-export var QuangNamLine = createLines(
+export var QuangNamLine = createPolygon(
   [
     [
       //---------------- QUẢNG NAM VS ĐÀ NẴNG----------------
@@ -9840,7 +9840,8 @@ export var QuangNamLine = createLines(
       [108.69043906902348, 15.812460843257336],
     ],
   ],
-  "Đường biên giới",
-  "tỉnh Quảng Nam",
-  [39, 122, 233]
+  "Quảng Nam",
+  10438.4,
+  1945812,
+  [190, 152, 151]
 );

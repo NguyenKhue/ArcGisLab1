@@ -1,4 +1,4 @@
-import { createLines } from "../../template/createLines.js";
+import { createPolygon } from "../../template/createPolygon.js";
 
 var  bgQN = [
     [107.81754812046093, 16.0571691694942],
@@ -8434,4 +8434,4 @@ var path = [
     [108.194500394, 16.209649738],
 ]
 
-export var TTHLines = createLines(path, "Thừa Thiên Huế", "Thừa Thiên Huế", [75, 8, 173])
+export var TTHLines = createPolygon(path, "Thừa Thiên Huế", 5033.2, 1319700, [225, 236, 159])

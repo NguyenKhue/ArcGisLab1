@@ -1,4 +1,4 @@
-import { createLines } from '../../template/createLines.js'
+import { createPolygon } from "../../template/createPolygon.js"
 
 var paths = [
 // Biên giới Đăk Lăk - Phú Yên
@@ -3324,4 +3324,4 @@ var paths = [
 
 ]
 
-export var PYLines = createLines(paths,"Phú Yên","tỉnh Phú Yên", [119, 190, 90])
+export var PYLines = createPolygon(paths,"Phú Yên",5045.3,	1012171,[186, 200, 189])
