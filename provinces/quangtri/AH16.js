@@ -1170,4 +1170,4 @@ var path = [
 
 ]
 
-export var SixteenHighWay = createLines(path, "HCMHighWay", "HCMHighWay")
+export var SixteenHighWay = createLines(path, "Đường AH16", "Đi qua địa phận tỉnh Quảng Trị")

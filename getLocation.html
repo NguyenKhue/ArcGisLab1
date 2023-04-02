@@ -31,8 +31,8 @@
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
     <script src="https://js.arcgis.com/4.26/"></script>
-    <script src="FileSaver.js"></script>
     <script>
+        
         function saveTextToClipboard(text) {
             const textarea = document.createElement('textarea');
             textarea.value = text;
@@ -54,9 +54,6 @@
             toast.style.borderRadius = '5px';
             toast.style.opacity = '0';
             toast.style.transition = 'opacity 0.3s ease-in-out';
-
-            // var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-            // saveAs(blob, "dynamic.txt");
 
             // add the toast element to the document
             document.body.appendChild(toast);
@@ -86,8 +83,8 @@
             const view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center:     [105.946250352, 18.073029833],
-                zoom: 10
+                center:  [105.853082836, 18.034065832],
+                zoom: 15
             });
 
             /*******************************************************************
@@ -103,13 +100,7 @@
                 const lat = Math.round(event.mapPoint.latitude * 1000000000) / 1000000000;
                 const lon = Math.round(event.mapPoint.longitude * 1000000000) / 1000000000;
 
-                view.popup.open({
-                    // Set the popup's title to the coordinates of the location
-                    title: "Reverse geocode: [" + lon + ", " + lat + "],",
-                    location: event.mapPoint // Set the location of the popup to the clicked location
-                });
-
-                t = "[" + lon + ", " + lat + "],";
+                t = "[" + lon + ", " + lat + "],\n";
                 navigator.clipboard.readText()
                     .then(text => {
                         t = text + t;
@@ -119,6 +110,7 @@
                     .catch(err => {
                         console.error('Failed to read clipboard contents: ', err);
                     });
+
 
                 const params = {
                     location: event.mapPoint

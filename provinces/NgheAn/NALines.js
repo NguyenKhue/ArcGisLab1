@@ -1,4 +1,4 @@
-import { createLines } from "../../template/createLines.js"
+import { createPolygon } from "../../template/createPolygon.js"
 var path = [
   [103.875191, 19.3079464],
   [103.8753323, 19.3072808],
@@ -8142,4 +8142,4 @@ var path2 = [
   ]
 ]
 
-export var NALines = createLines(path2, "Nghệ An", "Nghệ An")
+export var NALines = createPolygon(path2, "Nghệ An", 16493.7, 3727791, [169, 222, 230])
