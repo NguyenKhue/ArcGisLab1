@@ -8627,5 +8627,5 @@ export var DaNangLine = createPolygon(
   "Đà Nẵng",
   1285.4,
   1374562,
-  [133, 171, 203]
+  [155, 149, 211]
 );
