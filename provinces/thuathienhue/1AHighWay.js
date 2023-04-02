@@ -3248,4 +3248,4 @@ var path = [
 
 
 
-export var OneAHIGHWay = createLines(path, "OneAHIGHWay", "OneAHIGHWay")
+export var OneAHIGHWay = createLines(path, "Đường quốc lộ 1A", "Đi qua địa phận tỉnh Thừa Thiên Thuế")
