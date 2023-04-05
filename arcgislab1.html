@@ -75,6 +75,10 @@
         import { GLLines } from './provinces/GiaLai/GLLines.js'
         import { PYLines } from './provinces/PhuYen/PYLines.js'
 
+        import  { AH17 } from './provinces/GiaLai/AH17.js'
+        import  { QL24KT } from './provinces/KonTum/QL24KT.js'
+        import {QL19} from './provinces/GiaLai/QL19.js'
+
         import { BinhDinhLine } from './provinces/BinhDinh/BDLine.js'
         import { AH1BDinh } from './provinces/BinhDinh/AH1.js'
 
@@ -98,6 +102,7 @@
 
         const arrUniversity = Object.values(universities)
         const arrCity = Object.values(cities)
+
         var points = [].concat(
             [
                 ...arrUniversity, // dai hoc
@@ -107,7 +112,8 @@
             [
                 TTHLines, HUEHCMHIGHWay, OneAHIGHWay, AHOneLeftHIGHWay, FourtyNineHIGHWay, QTLines,
                 QTHCMHighWay, QTHCM1HighWay, AHOneQTHIGHWay, SixteenHighWay, QBLines, AH1QB, QBHCMHighWay, AH131QB,
-                BinhThuanLine, NinhThuanLine, KhanhHoaLine,
+                BinhThuanLine, NinhThuanLine, KhanhHoaLine,AH17, QL24KT, QL19,
+
                 OneABTLine, QL27NTLine,QL27BNTLine,QL27BKHLine, QL28BTLine,QL28BBTLine, QL55BBTLine, QL55BTLine, QL1ANTLine, QL1AKHLine, QL26KHLine,
                 THLines, NALines, HTLines, DLLines, DNLines, LDLines, AH1, HCM, QL7, QL217, KTLines, GLLines, PYLines,
                 BinhDinhLine, AH1BDinh,
@@ -116,6 +122,7 @@
                 QuangNgaiLine, AH1QNgai
 
             ]) // add new lines here
+
 
         var jsondata = createData(points, lines);
 
