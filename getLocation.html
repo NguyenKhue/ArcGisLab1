@@ -31,8 +31,6 @@
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
     <script src="https://js.arcgis.com/4.26/"></script>
-
-    <script src="getAllLocationOfProvince.js"></script>
     <script>
         
         function saveTextToClipboard(text) {
@@ -85,8 +83,8 @@
             const view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center: [108.98681947, 12.729079921],
-                zoom: 10
+                center:  [108.532277093, 11.900752388],
+                zoom: 15
             });
 
             /*******************************************************************
@@ -96,18 +94,23 @@
              * address is printed to the popup content.
              *******************************************************************/
             view.popup.autoOpenEnabled = false;
+            var t = ""
             view.on("click", (event) => {
                 // Get the coordinates of the click on the view
                 const lat = Math.round(event.mapPoint.latitude * 1000000000) / 1000000000;
                 const lon = Math.round(event.mapPoint.longitude * 1000000000) / 1000000000;
 
-                view.popup.open({
-                    // Set the popup's title to the coordinates of the location
-                    title: "Reverse geocode: [" + lon + ", " + lat + "],",
-                    location: event.mapPoint // Set the location of the popup to the clicked location
-                });
+                t = "[" + lon + ", " + lat + "],\n";
+                navigator.clipboard.readText()
+                    .then(text => {
+                        t = text + t;
+                        console.log('Pasted content: ', t);
+                        saveTextToClipboard(t)
+                    })
+                    .catch(err => {
+                        console.error('Failed to read clipboard contents: ', err);
+                    });
 
-                saveTextToClipboard("[" + lon + ", " + lat + "],")
 
                 const params = {
                     location: event.mapPoint

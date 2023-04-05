@@ -29,10 +29,27 @@
         import {DLLines} from './provinces/DakLak/DLLines.js'
         import {DNLines} from '/provinces/DakNong/DNLines.js'
         import {LDLines} from '/provinces/LamDong/LDLines.js'
+
         import {QL14DLLine} from '/provinces/DakLak/QL14.js'
+        import {QL26DLLine} from '/provinces/DakLak/QL26.js'
+        import {QL27DLLine} from '/provinces/DakLak/QL27.js'
+
+        import {QL14DNLine} from '/provinces/DakNong/QL14.js'
+        import {QL14aDNLine} from '/provinces/DakNong/QL14a.js'
+        import {QL14bDNLine} from '/provinces/DakNong/QL14b.js'
+        import {QL28DNLine} from '/provinces/DakNong/QL28.js'
+        import {QL28aDNLine} from '/provinces/DakNong/QL28a.js'
+
+        import {QL28aLDLine} from '/provinces/LamDong/QL28a.js'
+        import {QL28LDLine} from '/provinces/LamDong/QL28.js'
+        import {QL27LDLine} from '/provinces/LamDong/QL27.js'
+        import {QL27aLDLine} from '/provinces/LamDong/QL27a.js'
+        import {QL20LDLine} from '/provinces/LamDong/QL20.js'
+
 
         var points =  [].concat(tempPoints, []) // add new points here
-        var lines =  [].concat(tempLines, [TTHLines,BinhThuanLine, DLLines, DNLines, LDLines, QL14DLLine]) // add new lines here
+        var lines =  [].concat(tempLines, [TTHLines,BinhThuanLine, DLLines, DNLines, LDLines, QL14DLLine, QL26DLLine, QL27DLLine, QL14DNLine, QL14aDNLine, QL14bDNLine, QL28DNLine, QL28aDNLine,
+    QL28aLDLine, QL28LDLine, QL27LDLine, QL27aLDLine, QL20LDLine]) // add new lines here
 
         var jsondata = createData(points, lines)
 
@@ -53,7 +70,7 @@
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                center:      [108.58271859642579, 11.555470009124205],
+                center: [108.073802012, 11.575545181],
                 zoom: 20,
                 highlightOptions: {
                     color: "blue"
