@@ -719,4 +719,4 @@ var path = [
 
 ]
 
-export var QTHCM1HighWay = createLines(path, "QTHCM1HighWay", "QTHCM1HighWay")
+export var QTHCM1HighWay = createLines(path, "Đường Hồ Chí Minh", "Đi qua địa phận tỉnh Quảng Trị")
